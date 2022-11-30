@@ -1081,6 +1081,13 @@ section#faq_part {
 .faq_text .card .card-header h2 button {
     font-size: 21px;
 }
+
+.faq_text .card .card-header h2 button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
 /* ===== FAQ part css end ===== */
 
 /* Map part css start */
