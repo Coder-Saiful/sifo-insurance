@@ -1,0 +1,249 @@
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+
+@media (max-width: 1249.98px) {
+    .team_arrow_left {
+        left: 15px;
+    }
+
+    .team_arrow_right {
+        right: 15px;
+    }
+}
+
+@media (max-width: 1021.98px) {
+    .team_arrow_left {
+        left: 5px;
+    }
+
+    .team_arrow_right {
+        right: 5px;
+    }
+}
+
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1099.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    /* Header part responsive  */
+    #menu_part .container .collapse:not(.show) {
+        display: block !important;
+    }
+
+    #header_part {
+        height: 0;
+        overflow: hidden;
+    }
+
+
+    /* Banner part responsive */
+    .banner img {
+        width: 100%;
+        height: 510px;
+    }
+
+    .bannerContent h2 {
+        font-size: 45px;
+    }
+
+    #banner_part>ul.slick-dots {
+        bottom: 27px;
+    }
+
+    /* About part responsive */
+    section#about_part,
+    section#service_part,
+    section#blog_part,
+    section#team_part,
+    section#testimonial_part,
+    section#faq_part {
+        padding: 60px 0;
+    }
+
+    .about_text {
+        margin-top: 30px;
+    }
+
+    .about_text p:last-child {
+        margin: 0;
+    }
+
+    .sectionTitle p {
+        width: 80%;
+    }
+
+    /* Video part responsive */
+    .videoContent {
+        height: 500px;
+    }
+
+    /* Blog part responsive */
+    .blog_info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .blog_info p {
+        margin-bottom: 0;
+    }
+
+    /* Counter part responsive */
+    .counter1, .counter2 {
+        margin-bottom: 45px;
+    }
+
+    /* Map part responsive */
+    section#map_part .mapouter {
+        height: 500px;
+    }
+
+    section#map_part .mapouter .gmap_canvas iframe {
+        height: 500px;
+    }
+
+    /* Footer part responsive */
+    .footerAbout,
+    .footerGuidelines {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    /* Banner part responsive */
+    .banner img {
+        height: 410px;
+    }
+
+    .bannerContent h2 {
+        font-size: 40px;
+    }
+
+    #banner_part>ul.slick-dots {
+        bottom: -1px;
+    }
+
+    .bannerContent .actionButton button {
+        padding: 11px 14px;
+        border-radius: 4px;
+    }
+
+    .bannerContent h2 {
+        margin-bottom: 22px;
+        margin-top: -15px;
+    }
+
+    /* About part responsive */
+    section#about_part,
+    section#service_part,
+    section#blog_part,
+    section#team_part,
+    section#testimonial_part,
+    section#faq_part {
+        padding: 50px 0;
+    }
+
+    /* Video part responsive */
+    .videoContent {
+        height: 400px;
+    }
+
+    /* Map part responsive */
+    section#map_part .mapouter {
+        height: 400px;
+    }
+
+    section#map_part .mapouter .gmap_canvas iframe {
+        height: 400px;
+    }
+
+    /* Footer part responsive */
+    .footerServices {
+        margin-bottom: 25px;
+    }
+
+    .footer_social_icons ul {
+        justify-content: flex-start;
+        margin-top: 30px;
+        padding: 0;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* Menu part responsive */
+    .sectionTitle p {
+        width: 100%;
+    }
+
+    .navContainer {
+        width: 240px;
+    }
+
+    /* Banner part responsive */
+    .bannerContent h2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+        margin-top: -40px;
+    }
+
+    .bannerContent .actionButton button:last-child {
+        margin: 0;
+    }
+
+    .bannerContent .actionButton button {
+        padding: 8px 11px;
+        font-size: 15px;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+
+    /* Team part responsive */
+    .team_arrow_left {
+        display: none !important;
+    }
+
+    .team_arrow_right {
+        display: none !important;
+    }
+
+    .team_member .member_text {
+        border: none;
+    }
+
+    .slick-slide img {
+        margin: auto;
+    }
+    .quoteModal .modal-content {
+        max-width: 90%;
+    }
+
+    /* Counter part responsive */
+    .counter3 {
+        margin-bottom: 45px;
+    }
+
+    /* Map part responsive */
+    section#map_part .mapouter {
+        height: 300px;
+    }
+
+    section#map_part .mapouter .gmap_canvas iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 510.98px) {
+    button.modalClose {
+        top: 35px;
+    }
+}

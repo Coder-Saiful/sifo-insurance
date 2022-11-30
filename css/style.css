@@ -1,0 +1,1105 @@
+/* Typography start */
+:root {
+    --colorPrimary: #5F00E7;
+    --colorSecondary: #434343;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+section, header, nav, footer {
+    width: 100%;
+    overflow: hidden;
+}
+/* Typography end */
+
+/* ===== Header part css start ===== */
+
+#header_part {
+    background: #eeeeee;
+    height: 48px;
+}
+
+.contact ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact ul li {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-left: 1px solid #bbbbbb;
+    padding: 12px 0;
+    padding-left: 6px;
+    color: var(--colorSecondary);
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.contact ul li a i {
+    color: var(--colorPrimary);
+    margin-right: 4px;
+}
+
+.social_icons ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social_icons ul li {
+    display: inline-block;
+    border-right: 1px solid #bbbbbb;
+    padding: 12px 0;
+}
+
+.social_icons ul li:first-child {
+    border-left: 1px solid #bbbbbb;
+}
+
+.social_icons ul li a {
+    color: var(--colorPrimary);
+    transition: all .2s ease;
+    padding: 15px 14px;
+}
+
+
+/* ===== Header part css end ===== */
+
+/* ===== Navbar part css start ===== */
+
+nav#menu_part {
+    z-index: 12;
+    background-color: var(--colorPrimary);
+    position: sticky;
+    top: 0;
+}
+nav#menu_part > .container {
+	flex-wrap: nowrap;
+}
+h2.cName {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 35px;
+}
+h2.comName {
+    color: var(--colorPrimary);
+}
+.nav-link {
+    font-size: 18px;
+    color: var(--colorSecondary) !important;
+}
+.nav-link.active, .nav-link:hover {
+    color: var(--colorPrimary) !important;
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+}
+.navContainer {
+    position: fixed;
+    width: 300px;
+    background: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 1;
+    padding: 12px;
+}
+.navContainer.active {
+    transform: translateX(0);
+}
+.navBackdrop.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+.navRow {
+    width: 100%;
+}
+
+.menu_head {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menuIcon {
+    cursor: pointer;
+    padding: 5px 5px;
+}
+.menuIcon div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.menuIcon div:last-child {
+    margin-bottom: 0;
+}
+.navCloseBtn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.navCloseBtn div {
+    width: 25px;
+    height: 3px;
+    background: var(--colorSecondary);
+    border-radius: 10px;
+    overflow: hidden;
+    transform: rotate(45deg) translate(9px, 8px);
+}
+.navCloseBtn div:last-child {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    margin-top: -2px;
+}
+
+.stickyNav {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+}
+main {
+    visibility: hidden;
+}
+/* ===== Navbar part css end ===== */
+
+/* ===== Banner part css start ===== */
+
+.banner img {
+    width: 100%;
+    height: 610px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner:before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bannerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.bannerContent h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.bannerContent p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.bannerContent .actionButton button {
+    border: none;
+    background: var(--colorSecondary);
+    color: white;
+    padding: 13px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.bannerContent .actionButton button:hover {
+    background-color: var(--colorPrimary);
+}
+
+.bannerContent .actionButton button:last-child {
+    background: var(--colorPrimary);
+    margin-left: 10px;
+}
+
+.bannerContent .actionButton button:last-child:hover {
+    background-color: var(--colorSecondary);
+}
+
+
+#banner_part>ul.slick-dots {
+    list-style-type: none;
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#banner_part>ul.slick-dots li {
+    display: inline-block;
+}
+
+#banner_part>ul.slick-dots li button {
+    width: 14px;
+    color: transparent;
+    margin-right: 10px;
+    height: 14px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+#banner_part>ul.slick-dots li.slick-active button {
+    border-color: var(--colorPrimary);
+    background-color: var(--colorPrimary);
+}
+
+/* ===== Banner part css end ===== */
+
+/* ===== About part css start ===== */
+
+section#about_part {
+    background: #EBEFF4;
+    padding: 80px 0;
+}
+
+.sectionTitle p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    margin-bottom: 30px;
+}
+
+.sectionTitle h2 {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.sectionTitle h2:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background: var(--colorPrimary);
+    transform: translateX(-50%);
+}
+
+.about_title {
+    margin-bottom: 23px;
+}
+
+.about_text p {
+    text-align: justify;
+}
+
+.about_image {
+    overflow: hidden;
+}
+
+.about_image img {
+    transition: all 0.4s ease;
+}
+
+.about_image:hover img {
+    transform: scale(1.2);
+}
+
+/* ===== About part css end ===== */
+
+/* ===== Service part css end ===== */
+
+section#service_part {
+    padding: 80px 0;
+}
+
+.serviceInfo {
+    border: 1px solid #bbbbbb;
+    text-align: center;
+    padding: 14px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.serviceInfo p {
+    margin-bottom: 0;
+}
+
+.serviceInfo h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.serviceInfo:hover {
+    background: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+}
+
+.serviceInfo:hover * {
+    color: white;
+}
+
+.serviceInfo i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--colorPrimary);
+}
+
+/* ===== Service part css end ===== */
+
+/* ===== Video part css start ===== */
+.videoContent {
+    height: 600px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.videoContent:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.playIcon i {
+    color: white;
+    font-size: 40px;
+    z-index: 1;
+
+}
+
+.my-video-links {
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    animation-name: ripple;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
+    }
+
+    80% {
+        box-shadow: 0 0 0 20px #fff0, 0 0 0 40px #fff0;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
+    }
+}
+
+/* ===== Video part css end ===== */
+
+/* ===== Blog part css start ===== */
+
+section#blog_part {
+    background: #EBEFF4;
+    padding: 80px 0;
+}
+
+.blog_info h4 {
+    margin-top: 23px;
+}
+
+.blog_info h6 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.blog_info p {
+    font-size: 15px;
+}
+
+.blog_image {
+    overflow: hidden;
+}
+
+.blog_image img {
+    transition: all 0.5s ease;
+}
+
+.blog_image img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Blog part css end ===== */
+
+/* ===== Team part css start ===== */
+
+.teamTitle h2 {
+    margin-bottom: 30px;
+}
+
+.team_member .member_text {
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb;
+    text-align: center;
+}
+
+.team_member .member_text h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.team_member .member_text h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.team_member .member_text p {
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.team_member .member_text .socialIcons ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.team_member .member_text .socialIcons ul li a {
+    border: 1px solid #bbbbbb;
+    font-size: 18px;
+    padding: 8px 11px;
+    margin-right: 7px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.team_member .member_text .socialIcons ul li a.facebook {
+    color: #0674E7;
+}
+
+.team_member .member_text .socialIcons ul li a.facebook:hover {
+    background: #0674E7;
+    border-color: #0674E7;
+    color: white;
+}
+
+.team_member .member_text .socialIcons ul li a.instagram {
+    color: #8a3ab9;
+}
+
+.team_member .member_text .socialIcons ul li a.instagram:hover {
+    background: #8a3ab9;
+    border-color: #8a3ab9;
+    color: white;
+}
+
+.team_member .member_text .socialIcons ul li a.twitter {
+    color: #00A7E7;
+}
+
+.team_member .member_text .socialIcons ul li a.twitter:hover {
+    background: #00A7E7;
+    border-color: #00A7E7;
+    color: white;
+}
+
+.team_member .member_text .socialIcons ul li a.linkedin {
+    color: #006EAB;
+}
+
+.team_member .member_text .socialIcons ul li a.linkedin:hover {
+    background: #006EAB;
+    border-color: #006EAB;
+    color: white;
+}
+
+.team_arrow_left {
+    font-size: 30px;
+    color: var(--colorPrimary);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 30px; 
+    z-index: 5;
+}
+
+.team_arrow_right {
+    font-size: 30px;
+    color: var(--colorPrimary);
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 50%;   
+    z-index: 5;
+}
+
+section#team_part {
+    padding: 80px 0;
+    position: relative;
+}
+
+.team_slider > .slick-dots {
+    margin-bottom: 0;
+    margin-top: 19px;
+    list-style-type: none;
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.team_slider > .slick-dots li {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.team_slider > .slick-dots li button {
+    width: 13px;
+    color: transparent;
+    border: alicebluenone;
+    height: 13px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid var(--colorSecondary);
+}
+
+
+.team_slider > .slick-dots li.slick-active button {
+    background: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+}
+
+/* ===== Team part css end ===== */
+
+/* ===== Quote part css start ===== */
+
+section#quote_part {
+    position: relative;
+    padding: 80px 0;
+}
+
+section#quote_part:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.quote_content h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.quote_content p {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.qBtn {
+    background: var(--colorPrimary);
+    border: 2px solid var(--colorPrimary) !important;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.qBtn:hover,
+.qBtn:focus {
+    background: var(--colorPrimary) !important;
+    border: 2px solid var(--colorPrimary) !important;
+}
+
+.quoteModal .modal-header {
+    flex-direction: column !important;
+    background: var(--colorPrimary);
+    padding: 9px 0 9px 13px;
+}
+
+.modal-header h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.quoteModal .modal-content .modal-body {
+    padding: 17px;
+    overflow: auto;
+}
+
+.modal-header h4 {
+    color: white;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+.quoteModal {
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+
+button.modalClose {
+    color: white;
+    border: none;
+    background: transparent;
+    font-size: 21px;
+    position: absolute;
+    right: 10px;
+}
+
+.quoteModal .modal-content {
+    z-index: 14;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px;
+    border: none;
+}
+
+.quoteModal .modal-content .modal-footer {
+    background: var(--colorPrimary);
+    display: inline-block;
+    padding: 11px 0;
+}
+
+.quoteModal .modal-content .modal-footer p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+button.appointBtn {
+    border: 2px solid var(--colorPrimary);
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: var(--colorPrimary);
+    padding: 7px 0;
+}
+button.appointBtn:focus {
+    box-shadow: none;
+}
+.appointForm .form-control {
+    box-shadow: none !important;
+    border-radius: 5px;
+    height: 45px;
+}
+
+.appointForm .form-control::placeholder {
+    color: #212529 !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--colorPrimary);
+}
+
+.modalBackdrop.show {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    opacity: 0.5;
+}
+
+.removeScrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar,
+.quoteModal .modal-content .modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+body::-webkit-scrollbar-thumb,
+.quoteModal .modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 100px;
+}
+
+/* ===== Quote part css end ===== */
+
+/* ===== Testimonial part css start ===== */
+
+section#testimonial_part {
+    padding: 80px 0;
+}
+
+.testimonial_content {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 18px 18px;
+}
+
+.testimonialTitle {
+    margin-bottom: 30px;
+}
+
+.testimonial_content img {
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.testimonial_content h2 {
+    font-size: 27px;
+    margin-bottom: 2px;
+}
+
+.testimonial_content i {
+    color: #FC9400;
+}
+
+.testimonial_content p {
+    text-align: justify;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.testimonial_slider .slick-dots {
+    margin-bottom: 0;
+    margin-top: 24px;
+    list-style-type: none;
+    text-align: center;
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+}
+
+.testimonial_slider .slick-dots li {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.testimonial_slider .slick-dots li button {
+    width: 38px;
+    color: transparent;
+    border: none;
+    background: var(--colorSecondary);
+    height: 9px;
+    border-radius: 10px;
+}
+
+
+.testimonial_slider .slick-dots li.slick-active button {
+    background: var(--colorPrimary);
+}
+
+/* ===== Testimonial part css end ===== */
+
+/* ===== Counter part css start ===== */
+
+section#counter_part {
+    position: relative;
+    background-position: center !important;
+    padding: 80px 0;
+    background-attachment: fixed !important;
+    color: white !important;
+}
+
+section#counter_part:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+.counter_text {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.counter_text i {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.counter_text h2 {
+    font-size: 35px;
+}
+
+.counter_text h4 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* ===== Counter part css end ===== */
+
+/* ===== FAQ part css start ===== */
+
+section#faq_part {
+    padding: 80px 0;
+    background: #EBEFF4;
+}
+
+.faq_text .card .card-header {
+    padding: 0;
+}
+
+.faq_text .card .card-header button:focus {
+    box-shadow: none;
+}
+.faq_text .card .card-header h2 button {
+    font-size: 21px;
+}
+/* ===== FAQ part css end ===== */
+
+/* Map part css start */
+
+section#map_part .mapouter {
+    height: 600px;
+}
+
+section#map_part .mapouter .gmap_canvas iframe {
+    height: 600px;
+}
+
+/* Map part css end */
+
+/* ===== Footer part css start ===== */
+
+footer#footer_part {
+    background: var(--colorPrimary);
+    padding: 80px 0;
+}
+
+footer#footer_part * {
+    color: white;
+}
+
+footer#footer_part h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.footerAbout img {
+    width: 160px;
+}
+
+.footerGuidelines ul, .footerServices ul, .footerContact ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footerGuidelines ul li, .footerServices ul li, .footerContact ul li {
+    margin-bottom: 10px;
+}
+
+.footerGuidelines ul li a, .footerServices ul li a, .footerContact ul li a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footerGuidelines ul li a:hover, .footerServices ul li a:hover, .footerContact ul li a:hover {
+    margin-left: 10px;
+}
+
+.footerGuidelines ul li a b i, .footerServices ul li a b i, .footerContact ul li a b i {
+    margin-right: 6px;
+}
+.footerBottom .social_icons ul {
+    margin-bottom: 0;
+}
+.ftext p {
+    margin-bottom: 0;
+}
+.ftext p {
+    margin-bottom: 0;
+}
+
+.footer_social_icons ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_social_icons ul li a {
+    margin-right: 10px;
+    border: 1px solid white;
+    display: block;
+    padding: 7px 11px;
+    border-radius: 50%;
+}
+
+.footer_social_icons ul li:last-child {
+    margin-right: 0;
+}
+.row.footerBottom {
+    margin-top: 30px;
+}
+/* ===== Footer part css end ===== */
+
+/* ===== Preloader css start ===== */
+.preloader {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid var(--colorPrimary);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+
+/* ===== Preloader css end ===== */
+
+/* ===== Scroll to top button css start ===== */
+
+.scrollToTop {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #af6cf2;
+    position: fixed;
+    bottom: 20px;
+    color: #af6cf2;
+    right: 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 10;
+    display: none;
+    text-align: center;
+    padding: 4px 0;
+    box-sizing: border-box;
+}
+
+.scrollToTop:hover {
+    color: white;
+    background: #af6cf2;
+}
+/* ===== Scroll to top button css end ===== */
