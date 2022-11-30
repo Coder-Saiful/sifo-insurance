@@ -125,7 +125,7 @@ nav#menu_part > .container {
 	-ms-flex-wrap: nowrap;
 	    flex-wrap: nowrap;
 }
-h2.cName {
+h2.cName, h2.comName {
     color: white;
     text-transform: uppercase;
     margin-bottom: 0;
