@@ -30,8 +30,6 @@ const comName = document.querySelector('.comName');
 
 let isModalOpen = false;
 
-
-
 let dataObj = {};
 
 // =============== Appoint form validation 
@@ -230,8 +228,7 @@ appointForm.addEventListener('submit', (e) => {
         phone.value = "";
         email.value = "";
         clientImg.value = "";
-
-        // Submitted data = dataObj;
+        
         // console.log(dataObj);
 
         dataObj = {};
@@ -269,12 +266,6 @@ modalClose.addEventListener('click', (e) => {
     document.body.classList.remove('removeScrolling');
 });
 
-// Disable inspect element
-
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-})
-
 // Close  modal outside click
 
 document.addEventListener('click', (e) => {
@@ -298,48 +289,24 @@ menuIcon.addEventListener('click', (e) => {
 });
 
 // Close menu
-
-navCloseBtn.addEventListener('click', (e) => {
+function closeMenu(e) {
     e.preventDefault();
     navContainer.classList.remove('active');
     document.body.classList.remove('removeScrolling');
     navBackdrop.classList.remove('show');
     menuIcon.style.display = "block";
-});
+}
+
+navCloseBtn.addEventListener('click', closeMenu);
 
 // Close menu by menu item
-
 menuItem.forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        navContainer.classList.remove('active');
-        document.body.classList.remove('removeScrolling');
-        navBackdrop.classList.remove('show');
-        menuIcon.style.display = "block";
-    });
+    item.addEventListener('click', closeMenu);
 });
 
 // Close menu by Logo
+comName.addEventListener('click', closeMenu);
 
-comName.addEventListener('click', (e) => {
-    e.preventDefault();
-    navContainer.classList.remove('active');
-    document.body.classList.remove('removeScrolling');
-    navBackdrop.classList.remove('show');
-    menuIcon.style.display = "block";
-});
-
-// Close menu by pressing Escapte Button
-
-document.addEventListener('keydown', (e) => {
-    if (e.key == "Escape") {
-        if (navContainer.classList.contains('active')) {
-            e.preventDefault();
-            navContainer.classList.remove('active');
-            document.body.classList.remove('removeScrolling');
-            navBackdrop.classList.remove('show');
-            menuIcon.style.display = "block";
-        }
-    }
-});
+// Close menu by pressing Escape Button
+document.addEventListener('keydown', closeMenu);
 
