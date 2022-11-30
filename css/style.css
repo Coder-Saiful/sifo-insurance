@@ -1089,7 +1089,7 @@ section#faq_part {
     height: 600px;
 }
 
-section#map_part .mapouter .gmap_canvas iframe {
+#map_part .mapouter .gmap_canvas iframe {
     height: 600px;
     width: 100%;
     border: none;
