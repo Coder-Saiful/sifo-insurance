@@ -32,6 +32,8 @@ let isModalOpen = false;
 
 let dataObj = {};
 
+let submitData = false;
+
 // =============== Appoint form validation 
 
 // Quote Type Validation
@@ -238,6 +240,8 @@ appointForm.addEventListener('submit', (e) => {
         previewImg.style.marginBottom = "0";
         previewImg.style.width = "0px";
 
+        mediaFunction(x, submitData = true);
+
         quoteModal.style.display = 'none';
 
         setTimeout(() => {
@@ -310,7 +314,7 @@ comName.addEventListener('click', closeMenu);
 
 // medial query 
 
-function mediaFunction(x) {
+function mediaFunction(x, submitData) {
     if (x.matches) {
         aDate.type = "text";
         aDate.setAttribute('placeholder', "mm/ dd/ yyyy");
@@ -320,6 +324,10 @@ function mediaFunction(x) {
         aDate.addEventListener('focus', (e) => {
             e.target.type = "date";
         });
+        if (submitData) {
+            aDate.type = "text";
+            aDate.setAttribute('placeholder', "mm/ dd/ yyyy");  
+        }
     } else {
         aDate.type = "date";
     }
