@@ -233,9 +233,10 @@ appointForm.addEventListener('submit', (e) => {
 
         dataObj = {};
 
-        previewImg.removeAttribute('src');
+        previewImg.src = 'img/demoImg.jpg';
         previewImg.style.marginTop = "0";
         previewImg.style.marginBottom = "0";
+        previewImg.style.width = "0px";
 
         quoteModal.style.display = 'none';
 
@@ -307,6 +308,23 @@ menuItem.forEach(item => {
 // Close menu by Logo
 comName.addEventListener('click', closeMenu);
 
-// Close menu by pressing Escape Button
-document.addEventListener('keydown', closeMenu);
+// medial query 
 
+function mediaFunction(x) {
+    if (x.matches) {
+        aDate.type = "text";
+        aDate.setAttribute('placeholder', "mm/ dd/ yyyy");
+        aDate.addEventListener('mouseenter', (e) => {
+            e.target.type = "date";
+        });
+        aDate.addEventListener('focus', (e) => {
+            e.target.type = "date";
+        });
+    } else {
+        aDate.type = "date";
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 991px)")
+  mediaFunction(x);
+  x.addListener(mediaFunction);
