@@ -32,7 +32,7 @@ let isModalOpen = false;
 
 let dataObj = {};
 
-let submitData = false;
+let submittedData = false;
 
 // =============== Appoint form validation 
 
@@ -230,7 +230,7 @@ appointForm.addEventListener('submit', (e) => {
         phone.value = "";
         email.value = "";
         clientImg.value = "";
-        
+
         // console.log(dataObj);
 
         dataObj = {};
@@ -240,7 +240,8 @@ appointForm.addEventListener('submit', (e) => {
         previewImg.style.marginBottom = "0";
         previewImg.style.width = "0px";
 
-        mediaFunction(x, submitData = true);
+        submittedData = true;
+        mediaFunction(x, submittedData);
 
         quoteModal.style.display = 'none';
 
@@ -324,15 +325,16 @@ function mediaFunction(x, submitData) {
         aDate.addEventListener('focus', (e) => {
             e.target.type = "date";
         });
-        if (submitData) {
+
+        if (submitData == true) {
             aDate.type = "text";
-            aDate.setAttribute('placeholder', "mm/ dd/ yyyy");  
+            aDate.setAttribute('placeholder', "mm/ dd/ yyyy");
         }
     } else {
         aDate.type = "date";
     }
-  }
-  
-  var x = window.matchMedia("(max-width: 991px)")
-  mediaFunction(x);
-  x.addListener(mediaFunction);
+}
+
+var x = window.matchMedia("(max-width: 991px)")
+mediaFunction(x);
+x.addListener(mediaFunction);
