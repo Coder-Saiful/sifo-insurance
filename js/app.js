@@ -56,6 +56,10 @@ const validateAppointDate = (input) => {
         input.classList.add('is-invalid');
         // input.style.backgroundPosition = 'right calc(2.15em + 0.1875rem) center';
         invalidFeedback.innerHTML = "Please pick your date of birth!";
+        input.addEventListener('blur', (e) => {
+            input.type = "text";
+        input.setAttribute('placeholder', "mm/ dd/ yyyy");
+        });
     } else {
         input.classList.remove('is-invalid');
         invalidFeedback.innerHTML = "";
