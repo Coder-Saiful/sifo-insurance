@@ -168,11 +168,14 @@
         height: 400px;
     }
 
-    #_part .mapouter .gmap_canvas iframe {
+    #map_part .mapouter .gmap_canvas iframe {
         height: 400px;
     }
 
     /* Footer part responsive */
+    footer#footer_part {
+        padding: 60px;
+    }
     .footerServices {
         margin-bottom: 25px;
     }
@@ -247,4 +250,8 @@
     button.modalClose {
         top: 35px;
     }
+}
+
+@media (max-width: 400px) {
+    
 }
