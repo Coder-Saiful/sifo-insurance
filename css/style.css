@@ -125,15 +125,6 @@ nav#menu_part > .container {
 	-ms-flex-wrap: nowrap;
 	    flex-wrap: nowrap;
 }
-h2.cName, h2.comName {
-    color: white;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    font-size: 35px;
-}
-h2.comName {
-    color: var(--colorPrimary);
-}
 .nav-link {
     font-size: 18px;
     color: var(--colorSecondary) !important;
