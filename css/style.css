@@ -131,6 +131,7 @@ nav#menu_part > .container {
 }
 .nav-link.active, .nav-link:hover {
     color: var(--colorPrimary) !important;
+	font-weight: bold;
 }
 
 .navbar-expand-lg .navbar-nav {
