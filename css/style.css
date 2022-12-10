@@ -191,10 +191,10 @@ nav#menu_part > .container {
     padding: 5px 5px;
 }
 .menuIcon div {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: white;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     border-radius: 10px;
 }
 .menuIcon div:last-child {
